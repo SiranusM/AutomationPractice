@@ -1,7 +1,8 @@
 from selenium import webdriver
 import unittest
-import mainpage
-import signinpage
+import pages.mainpage
+import pages.mainpage
+import pages.signinpage
 from dotenv import load_dotenv
 load_dotenv()
 import os
@@ -15,10 +16,10 @@ class SigInAccount(unittest.TestCase):
         self.driver.maximize_window()
 
     def test_sign_in_account(self):
-        main_page = mainpage.MainPage(self.driver)
+        main_page = pages.mainpage.MainPage(self.driver)
         main_page.click_sign_in_button()
 
-        sign_in_page = signinpage.SignInPage(self.driver)
+        sign_in_page = pages.signinpage.SignInPage(self.driver)
         email = os.getenv('EMAIL')
         sign_in_page.enter_sign_in_email(email)
         password = os.getenv('PASSWORD')
