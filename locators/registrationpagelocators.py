@@ -9,7 +9,6 @@ class RegistrationPageLocators(object):
     STATE_DROPDOWN = (By.ID, 'id_state')
     STATE_OPTION = (By.TAG_NAME, 'option')
     POSTAL_CODE_TEXT_INPUT = (By.ID, 'postcode')
-    COUNTRY_DROPDOWN = ()
     PHONE_NUMBER_TEXT_INPUT = (By.ID, 'phone_mobile') 
     ALIAS_TEXT_INPUT = (By.ID, 'alias')
     REGISTER_ACCOUNT_BUTTON = (By.ID, 'submitAccount')
